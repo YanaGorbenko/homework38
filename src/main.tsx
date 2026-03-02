@@ -2,13 +2,11 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import { students } from './data.ts';
 
-let keyCount = 0;
-
 const markup = (
   <ul>
     {students.map(student => {
       return (
-        <li key={keyCount}>
+        <li key={student.id}>
           <p>Ім'я студента: {student.name}</p>
           <p>Вік студента: {student.age}</p>
           <p>Курс навчання: {student.course}</p>
